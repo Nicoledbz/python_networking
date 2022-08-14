@@ -1,0 +1,9 @@
+cisco CSR1000V (VXE) processor (revision VXE) with 1105351K/3075K bytes of memory.
+Processor board ID 9Z9SAMJR0HJ
+Router operating mode: Autonomous
+4 Gigabit Ethernet interfaces
+32768K bytes of non-volatile configuration memory.
+3012036K bytes of physical memory.
+6188032K bytes of virtual hard disk at bootflash:.
+
+Configuration register is 0x2102

@@ -1,0 +1,18 @@
+Value INTERFACE (\S+)
+Value IP_ADDR (\S+)
+Value LINE_STATUS (up|down)
+Value LINE_PROTOCOL (up|down)
+
+Start
+  ^Interface.*Protocol\s*$$ -> ShowIPIntBrief
+  
+ShowIPIntBrief
+  ^${INTERFACE}\s+${IP_ADDR}.*${LINE_STATUS}\s+${LINE_PROTOCOL}\s*$$ -> Record
+
+EOF
+
+#Interface              IP-Address      OK? Method Status                Protocol
+#GigabitEthernet1       192.168.1.222   YES NVRAM  up                    up      
+#GigabitEthernet2       unassigned      YES NVRAM  up                    up      
+#GigabitEthernet3       unassigned      YES NVRAM  up                    up      
+#GigabitEthernet4       unassigned      YES NVRAM  up                    up  
